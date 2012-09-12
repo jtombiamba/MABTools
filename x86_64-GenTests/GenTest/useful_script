@@ -1,0 +1,5 @@
+cat x86_Full_InsnList.csv | awk -F ';' '{if (match($2,"xmm") && match($3,"xmm") && $4=="" && $16=="Valid") print $1"_xmm_xmm;ListParam9.tmp;16;"$1";xmm;xmm;;";}'
+
+cat ../InstructionLists/x86_Full_InsnList.csv | gawk  -F';' 'begin{OFS=";"} {if (match($2,"imm") && match($3,"xmm") && match($4,"xmm") && $5=="" && $16=="Valid") print $1"i_x_x;Lp_i_x_x.tmp;16;"$1";imm;xmm;xmm;"; }' | wc -l
+
+cat ../InstructionLists/x86_Full_InsnList.csv | gawk  -F';' 'begin{OFS=";"} {if (match($2,"m128") && match($3,"xmm") && $4=="" && $16=="Valid") print $1"_m_x;Lp_m_x.tmp;16;"$1";m128;xmm;"; }' | wc -l

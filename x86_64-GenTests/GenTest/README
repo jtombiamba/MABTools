@@ -1,0 +1,33 @@
+Paramètres obligatoires :
+	- "-I" Fichier csv contenant la liste des instructions
+	- "-C" Fichier csv de configuration
+	- "-D" Fichier destination (pas de chemin, juste un nom)
+	- "-P" Fichier paramétrage (Allocation de registres)
+	- "-X" Deroulage de Boucle (Entier)
+	- "-L" Fichier descriptif des instructions
+
+Le fichier de configuration :
+	Il permet de définir quelles valeurs sont générés pour chaque type d'argument.
+	Permet également de définir quel agencement l'on veut pour les opérandes mémoirés (Base ou Seg+Base ou..)
+	WARNING : pour les agencements memoires, se référencer à la ligne contenant la liste des valeurs possibles dans le .ods (ligne dissociée des autres)
+
+Lien config/génération :
+	- Les noms des lignes sont dans le "BEGIN" en variables globales. Ils permettent d'effectuer une recherche via le tableau "tests_lists"
+	Format : tests_lists[Nom_de_la_ligne,i] avec i variant pour parcourir tout les cas affectés à cette liste
+	- Pour les lignes concernant les registres/valeurs testés dans les opérandes mémoires, on peut réferencer une liste à un indice i quelconque
+	Exemple : tests_lists["Mem:base32",1]="RIP" ; tests_lists["Mem:base32",2]="Reg32" ;	Reg32 renvoi alors vers tests_lists["Reg32",i]
+
+Relation argument/listes à tester :
+	- Pour l'instant le lien se fait dans la fonction "genparams" (ligne 368) où selon les valeurs que peuvent prendre les opérandes on appelle 
+	les bonnes listes dans le tableau de configuration.
+
+Fichiers générés :
+	- Le script généré un fichier .c en sortie (dans le dossier "Results" et dans le dossier local/custom) contenant les instructions au format définit par le 
+		fichier de configuration.
+	- De plus il essaie de compiler ce fichier pour obtenir un .o qui sera placé dans "Compilation/dot_o"
+	- Et il essaie de lier ce .o avec un main pour s'assurer que la compilation est possible. Le résultat est placé dans "Compilation/exe"
+	- Les potentielles erreurs de compilation sont regroupées dans un fichier placé dans "Compilation"
+	- Enfin le dossier "Check" contient les objdump des fichiers .o crées.
+
+Pour compiler en 32 bits :(pas pris en compte dans mon travail)
+sudo apt-get install gcc-multilib libc6-i386

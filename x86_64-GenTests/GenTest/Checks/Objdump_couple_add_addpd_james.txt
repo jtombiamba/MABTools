@@ -1,0 +1,67 @@
+
+Compilation/dot_o/couple_add_addpd_james.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <couple_add_addpd_james>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+   8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+   c:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  10:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  14:	48 8b 40 08          	mov    0x8(%rax),%rax
+  18:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  1c:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  20:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  24:	48 8b 40 08          	mov    0x8(%rax),%rax
+  28:	48 83 f8 0f          	cmp    $0xf,%rax
+  2c:	0f 86 95 00 00 00    	jbe    c7 <LL+0x8a>
+  32:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  36:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  3a:	48 89 d7             	mov    %rdx,%rdi
+
+000000000000003d <LL>:
+  3d:	48 83 c0 01          	add    $0x1,%rax
+  41:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  45:	48 83 c0 01          	add    $0x1,%rax
+  49:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  4d:	48 83 c0 01          	add    $0x1,%rax
+  51:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  55:	48 83 c0 01          	add    $0x1,%rax
+  59:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  5d:	48 83 c0 01          	add    $0x1,%rax
+  61:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  65:	48 83 c0 01          	add    $0x1,%rax
+  69:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  6d:	48 83 c0 01          	add    $0x1,%rax
+  71:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  75:	48 83 c0 01          	add    $0x1,%rax
+  79:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  7d:	48 83 c0 01          	add    $0x1,%rax
+  81:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  85:	48 83 c0 01          	add    $0x1,%rax
+  89:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  8d:	48 83 c0 01          	add    $0x1,%rax
+  91:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  95:	48 83 c0 01          	add    $0x1,%rax
+  99:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  9d:	48 83 c0 01          	add    $0x1,%rax
+  a1:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  a5:	48 83 c0 01          	add    $0x1,%rax
+  a9:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  ad:	48 83 c0 01          	add    $0x1,%rax
+  b1:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  b5:	48 83 c0 01          	add    $0x1,%rax
+  b9:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  bd:	48 83 ef 20          	sub    $0x20,%rdi
+  c1:	0f 85 76 ff ff ff    	jne    3d <LL>
+  c7:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  cb:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  cf:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  d3:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  d7:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  db:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  df:	c9                   	leaveq 
+  e0:	c3                   	retq   

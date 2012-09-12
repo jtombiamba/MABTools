@@ -1,0 +1,1 @@
+	:"D"(source->size),"a"(source->stream),"d"(source->stream)

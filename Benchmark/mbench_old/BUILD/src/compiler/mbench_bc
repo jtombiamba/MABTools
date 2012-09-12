@@ -1,0 +1,13 @@
+#!/bin/sh
+
+temp="/tmp/tmp.$$.c"
+/home/jtombiamba/local/${exec_prefix}/bin/mbench_cgen $1 -o $temp
+
+if test "gcc" = "icc"; then
+   OMPFLAGS=-openmp
+else
+   OMPFLAGS=-fopenmp
+fi
+
+gcc -Wall -O3 -I/home/jtombiamba/local/${prefix}/include -L/home/jtombiamba/local/lib -lmbench $OMPFLAGS -o $2 $temp /home/jtombiamba/local/custom/*.c
+rm $temp

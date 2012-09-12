@@ -1,0 +1,2 @@
+there is no warm-up in agner tests when using 128 bits-wide registers or less
+there is a warm-up of thousands of instructions when using full-length of YMM instructions

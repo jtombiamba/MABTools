@@ -1,0 +1,17 @@
+#!/bin/bash
+#IFS=';'
+
+while getopts "s:" OPTION
+do
+	case $OPTION in
+	s) xsize=${OPTARG};;
+	esac
+done
+#let decalage=$OPTIND-1
+#shift $decalage
+for i in `ls test_*.b`; do
+	launch=${i%.b}
+	#echo $xsize
+	mbench_bc $i $launch;
+	./$launch -s $xsize;
+done

@@ -1,0 +1,65 @@
+18a19,20
+> 	char *mem_string = (char*)malloc(2*STRING_SIZE*sizeof(char));//store registers in mem operands
+> 	char *reg_string = (char*)malloc(2*STRING_SIZE*sizeof(char));//store registers in register operands
+45c47
+< 			default: k = 8;
+---
+> 			default: k = 8; 
+102d103
+< 		printf("%s et %s\n", cs, Linetab[sorting_i -1].InstLine);
+152c153
+< 				token = strtok(string2, ";");
+---
+> 				token = strtok(string1, ";");
+164c165
+< 							basic_operandLine = mylib_operandLine_i(List_operandLine, line%sum);
+---
+> 							if(strchr(token,'$')==NULL){// A REGISTER OPERAND
+166c167,184
+< 							basic_operandLine->next->round = call_register(basic_operandLine->next->tab, basic_operandLine->next->sum - 1, &basic_operandLine->next->round, output);
+---
+> 								basic_operandLine = mylib_operandLine_i(List_operandLine, line%sum);
+> 
+> 								basic_operandLine->next->round = call_register(basic_operandLine->next->tab, basic_operandLine->next->sum - 1, &basic_operandLine->next->round, output);
+> 
+> 								token2 = mylib_find_and_replace(token, fileinit, output);
+> 
+> 								//reg_string = realloc(reg_string, (strlen(reg_string)+strlen(output))*sizeof(char));
+> 
+> 								//if(!reg_string){printf("realloc reg_string failed!!!!\n"); exit(EXIT_FAILURE);}
+> 
+> 								strcat(reg_string, output);
+> 								strcat(reg_string, ";");
+> 							
+> 								fprintf(fileout, "%s;", token2);
+> 							}
+> 							else{//AN IMMEDIATE OPERAND
+> 
+> 								basic_operandLine = mylib_operandLine_i(List_operandLine, line%sum);
+168c186,188
+< 							token2 = mylib_find_and_replace(token, fileinit, output);
+---
+> 								basic_operandLine->next->round = call_register(basic_operandLine->next->tab, basic_operandLine->next->sum - 1, &basic_operandLine->next->round, output);
+> 
+> 								token2 = mylib_find_and_replace(token, fileinit, output);
+170c190,192
+< 							fprintf(fileout, "%s;", token2);
+---
+> 								fprintf(fileout, "%s;", token2);
+> 
+> 							}
+186a209,215
+> 							//mem_string = realloc(mem_string, (strlen(mem_string)+strlen(output))*sizeof(char));
+> 
+> 							//if(!mem_string){printf("realloc mem_string failed!!!!\n"); exit(EXIT_FAILURE);}
+> 
+> 							strcat(mem_string, output);
+> 							strcat(mem_string, ";");
+> 
+207c236
+< 	rename("InstrArgs2.tmp", "InstrArgs3.tmp");
+---
+> 	remove("InstrArgs2.tmp");
+208a238,239
+> 	printf("the end\n");
+> 	mylib_print_param_list(mylib_unique_list(reg_string, &i), i, stdout);

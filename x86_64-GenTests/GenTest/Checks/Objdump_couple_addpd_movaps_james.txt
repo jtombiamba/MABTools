@@ -1,0 +1,83 @@
+
+Compilation/dot_o/couple_addpd_movaps_james.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <couple_addpd_movaps_james>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+   8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+   c:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  10:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  14:	48 8b 40 08          	mov    0x8(%rax),%rax
+  18:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  1c:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  20:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  24:	48 8b 40 08          	mov    0x8(%rax),%rax
+  28:	48 83 f8 0f          	cmp    $0xf,%rax
+  2c:	0f 86 b5 00 00 00    	jbe    e7 <LL+0xaa>
+  32:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  36:	48 8b 40 08          	mov    0x8(%rax),%rax
+  3a:	48 89 c7             	mov    %rax,%rdi
+
+000000000000003d <LL>:
+  3d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  41:	0f 28 d0             	movaps %xmm0,%xmm2
+  44:	0f 28 da             	movaps %xmm2,%xmm3
+  47:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  4b:	0f 28 c1             	movaps %xmm1,%xmm0
+  4e:	0f 28 d0             	movaps %xmm0,%xmm2
+  51:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  55:	0f 28 cb             	movaps %xmm3,%xmm1
+  58:	0f 28 c1             	movaps %xmm1,%xmm0
+  5b:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  5f:	0f 28 da             	movaps %xmm2,%xmm3
+  62:	0f 28 cb             	movaps %xmm3,%xmm1
+  65:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  69:	0f 28 d0             	movaps %xmm0,%xmm2
+  6c:	0f 28 da             	movaps %xmm2,%xmm3
+  6f:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  73:	0f 28 c1             	movaps %xmm1,%xmm0
+  76:	0f 28 d0             	movaps %xmm0,%xmm2
+  79:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  7d:	0f 28 cb             	movaps %xmm3,%xmm1
+  80:	0f 28 c1             	movaps %xmm1,%xmm0
+  83:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  87:	0f 28 da             	movaps %xmm2,%xmm3
+  8a:	0f 28 cb             	movaps %xmm3,%xmm1
+  8d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  91:	0f 28 d0             	movaps %xmm0,%xmm2
+  94:	0f 28 da             	movaps %xmm2,%xmm3
+  97:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  9b:	0f 28 c1             	movaps %xmm1,%xmm0
+  9e:	0f 28 d0             	movaps %xmm0,%xmm2
+  a1:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  a5:	0f 28 cb             	movaps %xmm3,%xmm1
+  a8:	0f 28 c1             	movaps %xmm1,%xmm0
+  ab:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  af:	0f 28 da             	movaps %xmm2,%xmm3
+  b2:	0f 28 cb             	movaps %xmm3,%xmm1
+  b5:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  b9:	0f 28 d0             	movaps %xmm0,%xmm2
+  bc:	0f 28 da             	movaps %xmm2,%xmm3
+  bf:	66 0f 58 cb          	addpd  %xmm3,%xmm1
+  c3:	0f 28 c1             	movaps %xmm1,%xmm0
+  c6:	0f 28 d0             	movaps %xmm0,%xmm2
+  c9:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  cd:	0f 28 cb             	movaps %xmm3,%xmm1
+  d0:	0f 28 c1             	movaps %xmm1,%xmm0
+  d3:	66 0f 58 d0          	addpd  %xmm0,%xmm2
+  d7:	0f 28 da             	movaps %xmm2,%xmm3
+  da:	0f 28 cb             	movaps %xmm3,%xmm1
+  dd:	48 83 ef 30          	sub    $0x30,%rdi
+  e1:	0f 85 56 ff ff ff    	jne    3d <LL>
+  e7:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  eb:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  ef:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  f3:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  f7:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  fb:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  ff:	c9                   	leaveq 
+ 100:	c3                   	retq   

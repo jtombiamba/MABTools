@@ -1,0 +1,47 @@
+
+Compilation/dot_o/test_mov_i_m.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_mov_i_m>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 c7 45 e0 00 00 00 	movq   $0x0,-0x20(%rbp)
+  10:	00 
+  11:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  18:	00 
+  19:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  1d:	48 8b 40 08          	mov    0x8(%rax),%rax
+  21:	48 83 f8 0f          	cmp    $0xf,%rax
+  25:	76 35                	jbe    5c <LL+0x20>
+  27:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  2b:	48 8b 40 08          	mov    0x8(%rax),%rax
+  2f:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  33:	48 8b 12             	mov    (%rdx),%rdx
+  36:	48 89 c1             	mov    %rax,%rcx
+  39:	48 89 d3             	mov    %rdx,%rbx
+
+000000000000003c <LL>:
+  3c:	48 83 e9 00          	sub    $0x0,%rcx
+  40:	75 fa                	jne    3c <LL>
+  42:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  46:	48 8b 40 08          	mov    0x8(%rax),%rax
+  4a:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  4e:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  52:	48 8b 40 08          	mov    0x8(%rax),%rax
+  56:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  5a:	eb 08                	jmp    64 <LL+0x28>
+  5c:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  63:	00 
+  64:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  68:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  6c:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  70:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  74:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  78:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  7c:	5b                   	pop    %rbx
+  7d:	c9                   	leaveq 
+  7e:	c3                   	retq   

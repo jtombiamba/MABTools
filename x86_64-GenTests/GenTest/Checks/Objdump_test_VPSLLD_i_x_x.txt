@@ -1,0 +1,56 @@
+
+Compilation/dot_o/test_VPSLLD_i_x_x.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_VPSLLD_i_x_x>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+   d:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  11:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  15:	48 8b 40 08          	mov    0x8(%rax),%rax
+  19:	48 89 55 e0          	mov    %rdx,-0x20(%rbp)
+  1d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  21:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  25:	48 8b 40 08          	mov    0x8(%rax),%rax
+  29:	48 83 f8 0f          	cmp    $0xf,%rax
+  2d:	76 6b                	jbe    9a <LL+0x56>
+  2f:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  33:	48 8b 40 08          	mov    0x8(%rax),%rax
+  37:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  3b:	48 8b 12             	mov    (%rdx),%rdx
+  3e:	48 89 c1             	mov    %rax,%rcx
+  41:	48 89 d3             	mov    %rdx,%rbx
+
+0000000000000044 <LL>:
+  44:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  49:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  4e:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  53:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  58:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  5d:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  62:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  67:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  6c:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  71:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  76:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  7b:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  80:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  85:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  8a:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  8f:	c5 f1 72 f2 01       	vpslld $0x1,%xmm2,%xmm1
+  94:	48 83 e9 10          	sub    $0x10,%rcx
+  98:	75 aa                	jne    44 <LL>
+  9a:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  9e:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  a2:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  a6:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  aa:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  ae:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  b2:	5b                   	pop    %rbx
+  b3:	c9                   	leaveq 
+  b4:	c3                   	retq   

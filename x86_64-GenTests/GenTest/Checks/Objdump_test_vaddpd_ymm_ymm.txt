@@ -1,0 +1,63 @@
+
+Compilation/dot_o/test_vaddpd_ymm_ymm.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_vaddpd_ymm_ymm>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 c7 45 e0 00 00 00 	movq   $0x0,-0x20(%rbp)
+  10:	00 
+  11:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  18:	00 
+  19:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  1d:	48 8b 40 08          	mov    0x8(%rax),%rax
+  21:	48 83 f8 0f          	cmp    $0xf,%rax
+  25:	76 75                	jbe    9c <LL+0x60>
+  27:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  2b:	48 8b 40 08          	mov    0x8(%rax),%rax
+  2f:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  33:	48 8b 12             	mov    (%rdx),%rdx
+  36:	48 89 c1             	mov    %rax,%rcx
+  39:	48 89 d3             	mov    %rdx,%rbx
+
+000000000000003c <LL>:
+  3c:	c5 f5 58 d9          	vaddpd %ymm1,%ymm1,%ymm3
+  40:	c5 ed 58 cb          	vaddpd %ymm3,%ymm2,%ymm1
+  44:	c5 e5 58 ca          	vaddpd %ymm2,%ymm3,%ymm1
+  48:	c5 dd 58 d9          	vaddpd %ymm1,%ymm4,%ymm3
+  4c:	c5 f5 58 d9          	vaddpd %ymm1,%ymm1,%ymm3
+  50:	c5 ed 58 cb          	vaddpd %ymm3,%ymm2,%ymm1
+  54:	c5 e5 58 ca          	vaddpd %ymm2,%ymm3,%ymm1
+  58:	c5 dd 58 d9          	vaddpd %ymm1,%ymm4,%ymm3
+  5c:	c5 f5 58 d9          	vaddpd %ymm1,%ymm1,%ymm3
+  60:	c5 ed 58 cb          	vaddpd %ymm3,%ymm2,%ymm1
+  64:	c5 e5 58 ca          	vaddpd %ymm2,%ymm3,%ymm1
+  68:	c5 dd 58 d9          	vaddpd %ymm1,%ymm4,%ymm3
+  6c:	c5 f5 58 d9          	vaddpd %ymm1,%ymm1,%ymm3
+  70:	c5 ed 58 cb          	vaddpd %ymm3,%ymm2,%ymm1
+  74:	c5 e5 58 ca          	vaddpd %ymm2,%ymm3,%ymm1
+  78:	c5 dd 58 d9          	vaddpd %ymm1,%ymm4,%ymm3
+  7c:	48 83 e9 10          	sub    $0x10,%rcx
+  80:	75 ba                	jne    3c <LL>
+  82:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  86:	48 8b 40 08          	mov    0x8(%rax),%rax
+  8a:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  8e:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  92:	48 8b 40 08          	mov    0x8(%rax),%rax
+  96:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  9a:	eb 08                	jmp    a4 <LL+0x68>
+  9c:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
+  a3:	00 
+  a4:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  a8:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  ac:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  b0:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  b4:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  b8:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  bc:	5b                   	pop    %rbx
+  bd:	c9                   	leaveq 
+  be:	c3                   	retq   

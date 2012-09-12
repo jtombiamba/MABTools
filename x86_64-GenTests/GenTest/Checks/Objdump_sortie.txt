@@ -1,0 +1,234 @@
+
+Compilation/dot_o/sortie.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <Label>:
+   0:	66 98                	cbtw   
+   2:	99                   	cltd   
+   3:	48 98                	cltq   
+   5:	f8                   	clc    
+   6:	fc                   	cld    
+   7:	fa                   	cli    
+   8:	0f 06                	clts   
+   a:	f5                   	cmc    
+   b:	67 a7                	cmpsl  %es:(%edi),%ds:(%esi)
+   d:	67 a7                	cmpsl  %es:(%edi),%ds:(%esi)
+   f:	67 a7                	cmpsl  %es:(%edi),%ds:(%esi)
+  11:	48 a7                	cmpsq  %es:(%rdi),%ds:(%rsi)
+  13:	67 a7                	cmpsl  %es:(%edi),%ds:(%esi)
+  15:	a6                   	cmpsb  %es:(%rdi),%ds:(%rsi)
+  16:	a7                   	cmpsl  %es:(%rdi),%ds:(%rsi)
+  17:	48 a7                	cmpsq  %es:(%rdi),%ds:(%rsi)
+  19:	a7                   	cmpsl  %es:(%rdi),%ds:(%rsi)
+  1a:	0f a2                	cpuid  
+  1c:	48 99                	cqto   
+  1e:	66 99                	cwtd   
+  20:	98                   	cwtl   
+  21:	0f 77                	emms   
+  23:	d9 f0                	f2xm1  
+  25:	d9 e1                	fabs   
+  27:	de c1                	faddp  %st,%st(1)
+  29:	d9 e0                	fchs   
+  2b:	9b db e2             	fclex  
+  2e:	d8 d1                	fcom   %st(1)
+  30:	d8 d9                	fcomp  %st(1)
+  32:	de d9                	fcompp 
+  34:	d9 ff                	fcos   
+  36:	d9 f6                	fdecstp 
+  38:	de f1                	fdivp  %st,%st(1)
+  3a:	de f9                	fdivrp %st,%st(1)
+  3c:	0f 0e                	femms  
+  3e:	d9 f7                	fincstp 
+  40:	9b db e3             	finit  
+  43:	d9 e8                	fld1   
+  45:	d9 ea                	fldl2e 
+  47:	d9 e9                	fldl2t 
+  49:	d9 ec                	fldlg2 
+  4b:	d9 ed                	fldln2 
+  4d:	d9 eb                	fldpi  
+  4f:	d9 ee                	fldz   
+  51:	de c9                	fmulp  %st,%st(1)
+  53:	db e2                	fnclex 
+  55:	db e3                	fninit 
+  57:	d9 d0                	fnop   
+  59:	df e0                	fnstsw %ax
+  5b:	d9 f3                	fpatan 
+  5d:	d9 f8                	fprem  
+  5f:	d9 f5                	fprem1 
+  61:	d9 f2                	fptan  
+  63:	d9 fc                	frndint 
+  65:	d9 fd                	fscale 
+  67:	d9 fe                	fsin   
+  69:	d9 fb                	fsincos 
+  6b:	d9 fa                	fsqrt  
+  6d:	9b df e0             	fstsw  %ax
+  70:	de e1                	fsubp  %st,%st(1)
+  72:	de e9                	fsubrp %st,%st(1)
+  74:	d9 e4                	ftst   
+  76:	dd e1                	fucom  %st(1)
+  78:	dd e9                	fucomp %st(1)
+  7a:	da e9                	fucompp 
+  7c:	9b d9 e5             	fxam   
+  7f:	d9 c9                	fxch   %st(1)
+  81:	d9 f4                	fxtract 
+  83:	d9 f1                	fyl2x  
+  85:	d9 f9                	fyl2xp1 
+  87:	0f 37                	getsec 
+  89:	f4                   	hlt    
+  8a:	ec                   	in     (%dx),%al
+  8b:	ed                   	in     (%dx),%eax
+  8c:	66 ed                	in     (%dx),%ax
+  8e:	67 6d                	insl   (%dx),%es:(%edi)
+  90:	67 6d                	insl   (%dx),%es:(%edi)
+  92:	67 6d                	insl   (%dx),%es:(%edi)
+  94:	6c                   	insb   (%dx),%es:(%rdi)
+  95:	6d                   	insl   (%dx),%es:(%rdi)
+  96:	66 6d                	insw   (%dx),%es:(%rdi)
+  98:	cc                   	int3   
+  99:	0f 08                	invd   
+  9b:	cf                   	iret   
+  9c:	cf                   	iret   
+  9d:	48 cf                	iretq  
+  9f:	c9                   	leaveq 
+  a0:	c9                   	leaveq 
+  a1:	0f ae e8             	lfence 
+  a4:	f0 ad                	lock lods %ds:(%rsi),%eax
+  a6:	ad                   	lods   %ds:(%rsi),%eax
+  a7:	ad                   	lods   %ds:(%rsi),%eax
+  a8:	ad                   	lods   %ds:(%rsi),%eax
+  a9:	ac                   	lods   %ds:(%rsi),%al
+  aa:	ad                   	lods   %ds:(%rsi),%eax
+  ab:	48 ad                	lods   %ds:(%rsi),%rax
+  ad:	66 ad                	lods   %ds:(%rsi),%ax
+  af:	0f ae f0             	mfence 
+  b2:	0f 01 c8             	monitor %rax,%rcx,%rdx
+  b5:	67 a5                	movsl  %ds:(%esi),%es:(%edi)
+  b7:	67 a5                	movsl  %ds:(%esi),%es:(%edi)
+  b9:	67 a5                	movsl  %ds:(%esi),%es:(%edi)
+  bb:	67 a5                	movsl  %ds:(%esi),%es:(%edi)
+  bd:	a4                   	movsb  %ds:(%rsi),%es:(%rdi)
+  be:	a5                   	movsl  %ds:(%rsi),%es:(%rdi)
+  bf:	48 a5                	movsq  %ds:(%rsi),%es:(%rdi)
+  c1:	66 a5                	movsw  %ds:(%rsi),%es:(%rdi)
+  c3:	0f 01 c9             	mwait  %rax,%rcx
+  c6:	90                   	nop
+  c7:	ee                   	out    %al,(%dx)
+  c8:	66 ef                	out    %ax,(%dx)
+  ca:	ef                   	out    %eax,(%dx)
+  cb:	67 6f                	outsl  %ds:(%esi),(%dx)
+  cd:	67 6f                	outsl  %ds:(%esi),(%dx)
+  cf:	67 6f                	outsl  %ds:(%esi),(%dx)
+  d1:	6e                   	outsb  %ds:(%rsi),(%dx)
+  d2:	6f                   	outsl  %ds:(%rsi),(%dx)
+  d3:	66 6f                	outsw  %ds:(%rsi),(%dx)
+  d5:	f3 90                	pause  
+  d7:	0f a1                	popq   %fs
+  d9:	0f a1                	popq   %fs
+  db:	0f a9                	popq   %gs
+  dd:	0f a9                	popq   %gs
+  df:	9d                   	popfq  
+  e0:	9d                   	popfq  
+  e1:	0f a0                	pushq  %fs
+  e3:	0f a0                	pushq  %fs
+  e5:	0f a8                	pushq  %gs
+  e7:	0f a8                	pushq  %gs
+  e9:	9c                   	pushfq 
+  ea:	9c                   	pushfq 
+  eb:	0f 32                	rdmsr  
+  ed:	0f 32                	rdmsr  
+  ef:	0f 33                	rdpmc  
+  f1:	0f 31                	rdtsc  
+  f3:	0f 01 f9             	rdtscp 
+  f6:	f3 6d                	rep insl (%dx),%es:(%rdi)
+  f8:	67 f3 6d             	rep insl (%dx),%es:(%edi)
+  fb:	f3 6d                	rep insl (%dx),%es:(%rdi)
+  fd:	67 f3 6d             	rep insl (%dx),%es:(%edi)
+ 100:	67 f3 6d             	rep insl (%dx),%es:(%edi)
+ 103:	f3 ac                	rep lods %ds:(%rsi),%al
+ 105:	67 f3 ac             	rep lods %ds:(%esi),%al
+ 108:	f3 48 ad             	rep lods %ds:(%rsi),%rax
+ 10b:	67 f3 ad             	rep lods %ds:(%esi),%eax
+ 10e:	67 66 f3 ad          	rep lods %ds:(%esi),%ax
+ 112:	f3 a5                	rep movsl %ds:(%rsi),%es:(%rdi)
+ 114:	67 f3 a5             	rep movsl %ds:(%esi),%es:(%edi)
+ 117:	67 f3 a5             	rep movsl %ds:(%esi),%es:(%edi)
+ 11a:	67 f3 a5             	rep movsl %ds:(%esi),%es:(%edi)
+ 11d:	f3 a5                	rep movsl %ds:(%rsi),%es:(%rdi)
+ 11f:	67 f3 6f             	rep outsl %ds:(%esi),(%dx)
+ 122:	f3 6f                	rep outsl %ds:(%rsi),(%dx)
+ 124:	f3 6f                	rep outsl %ds:(%rsi),(%dx)
+ 126:	67 f3 6f             	rep outsl %ds:(%esi),(%dx)
+ 129:	67 f3 6f             	rep outsl %ds:(%esi),(%dx)
+ 12c:	f3 ab                	rep stos %eax,%es:(%rdi)
+ 12e:	67 f3 ab             	rep stos %eax,%es:(%edi)
+ 131:	67 f3 ab             	rep stos %eax,%es:(%edi)
+ 134:	f3 ab                	rep stos %eax,%es:(%rdi)
+ 136:	67 f3 ab             	rep stos %eax,%es:(%edi)
+ 139:	67 f3 a7             	repz cmpsl %es:(%edi),%ds:(%esi)
+ 13c:	f3 a7                	repz cmpsl %es:(%rdi),%ds:(%rsi)
+ 13e:	67 f3 a7             	repz cmpsl %es:(%edi),%ds:(%esi)
+ 141:	67 f3 a7             	repz cmpsl %es:(%edi),%ds:(%esi)
+ 144:	f3 a7                	repz cmpsl %es:(%rdi),%ds:(%rsi)
+ 146:	67 f3 af             	repz scas %es:(%edi),%eax
+ 149:	f3 af                	repz scas %es:(%rdi),%eax
+ 14b:	f3 af                	repz scas %es:(%rdi),%eax
+ 14d:	67 f3 af             	repz scas %es:(%edi),%eax
+ 150:	67 f3 af             	repz scas %es:(%edi),%eax
+ 153:	67 f2 a7             	repnz cmpsl %es:(%edi),%ds:(%esi)
+ 156:	f2 a7                	repnz cmpsl %es:(%rdi),%ds:(%rsi)
+ 158:	f2 a7                	repnz cmpsl %es:(%rdi),%ds:(%rsi)
+ 15a:	67 f2 a7             	repnz cmpsl %es:(%edi),%ds:(%esi)
+ 15d:	67 f2 a7             	repnz cmpsl %es:(%edi),%ds:(%esi)
+ 160:	67 f2 af             	repnz scas %es:(%edi),%eax
+ 163:	f2 af                	repnz scas %es:(%rdi),%eax
+ 165:	67 f2 af             	repnz scas %es:(%edi),%eax
+ 168:	67 f2 af             	repnz scas %es:(%edi),%eax
+ 16b:	f2 af                	repnz scas %es:(%rdi),%eax
+ 16d:	c3                   	retq   
+ 16e:	c3                   	retq   
+ 16f:	67 af                	scas   %es:(%edi),%eax
+ 171:	48 af                	scas   %es:(%rdi),%rax
+ 173:	67 af                	scas   %es:(%edi),%eax
+ 175:	67 af                	scas   %es:(%edi),%eax
+ 177:	67 af                	scas   %es:(%edi),%eax
+ 179:	ae                   	scas   %es:(%rdi),%al
+ 17a:	af                   	scas   %es:(%rdi),%eax
+ 17b:	48 af                	scas   %es:(%rdi),%rax
+ 17d:	66 af                	scas   %es:(%rdi),%ax
+ 17f:	0f ae f8             	sfence 
+ 182:	f9                   	stc    
+ 183:	fd                   	std    
+ 184:	fb                   	sti    
+ 185:	ab                   	stos   %eax,%es:(%rdi)
+ 186:	ab                   	stos   %eax,%es:(%rdi)
+ 187:	ab                   	stos   %eax,%es:(%rdi)
+ 188:	67 48 ab             	stos   %rax,%es:(%edi)
+ 18b:	aa                   	stos   %al,%es:(%rdi)
+ 18c:	ab                   	stos   %eax,%es:(%rdi)
+ 18d:	48 ab                	stos   %rax,%es:(%rdi)
+ 18f:	66 ab                	stos   %ax,%es:(%rdi)
+ 191:	0f 01 f8             	swapgs 
+ 194:	0f 05                	syscall 
+ 196:	0f 34                	sysenter 
+ 198:	0f 35                	sysexit 
+ 19a:	0f 35                	sysexit 
+ 19c:	0f 07                	sysret 
+ 19e:	0f 0b                	ud2    
+ 1a0:	0f 01 c1             	vmcall 
+ 1a3:	0f 01 c2             	vmlaunch 
+ 1a6:	0f 01 c3             	vmresume 
+ 1a9:	0f 01 c4             	vmxoff 
+ 1ac:	c5 fc 77             	vzeroall 
+ 1af:	c5 f8 77             	vzeroupper 
+ 1b2:	9b                   	fwait
+ 1b3:	0f 09                	wbinvd 
+ 1b5:	0f 30                	wrmsr  
+ 1b7:	0f 30                	wrmsr  
+ 1b9:	0f 01 d0             	xgetbv 
+ 1bc:	d7                   	xlat   %ds:(%rbx)
+ 1bd:	67 d7                	xlat   %ds:(%ebx)
+ 1bf:	d7                   	xlat   %ds:(%rbx)
+ 1c0:	d7                   	xlat   %ds:(%rbx)
+ 1c1:	0f 01 d1             	xsetbv 

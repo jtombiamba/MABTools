@@ -1,0 +1,82 @@
+
+Compilation/dot_o/test_out_arr_67.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_out_arr_67>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+   d:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  11:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  15:	48 8b 40 08          	mov    0x8(%rax),%rax
+  19:	48 89 55 e0          	mov    %rdx,-0x20(%rbp)
+  1d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  21:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  25:	48 8b 40 08          	mov    0x8(%rax),%rax
+  29:	48 83 f8 0f          	cmp    $0xf,%rax
+  2d:	0f 86 a6 00 00 00    	jbe    d9 <LL+0x8a>
+  33:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  37:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  3b:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  3f:	48 8b 00             	mov    (%rax),%rax
+  42:	48 8b 4d c8          	mov    -0x38(%rbp),%rcx
+  46:	48 8b 09             	mov    (%rcx),%rcx
+  49:	48 89 d7             	mov    %rdx,%rdi
+  4c:	48 89 cb             	mov    %rcx,%rbx
+
+000000000000004f <LL>:
+  4f:	66 0f 59 cb          	mulpd  %xmm3,%xmm1
+  53:	0f 29 00             	movaps %xmm0,(%rax)
+  56:	0f 28 13             	movaps (%rbx),%xmm2
+  59:	0f 58 cb             	addps  %xmm3,%xmm1
+  5c:	0f 28 00             	movaps (%rax),%xmm0
+  5f:	66 0f 59 da          	mulpd  %xmm2,%xmm3
+  63:	0f 29 0b             	movaps %xmm1,(%rbx)
+  66:	0f 28 00             	movaps (%rax),%xmm0
+  69:	0f 58 da             	addps  %xmm2,%xmm3
+  6c:	0f 28 0b             	movaps (%rbx),%xmm1
+  6f:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+  73:	0f 29 18             	movaps %xmm3,(%rax)
+  76:	0f 28 0b             	movaps (%rbx),%xmm1
+  79:	0f 58 d0             	addps  %xmm0,%xmm2
+  7c:	0f 28 18             	movaps (%rax),%xmm3
+  7f:	66 0f 59 c1          	mulpd  %xmm1,%xmm0
+  83:	0f 29 13             	movaps %xmm2,(%rbx)
+  86:	0f 28 18             	movaps (%rax),%xmm3
+  89:	0f 58 c1             	addps  %xmm1,%xmm0
+  8c:	0f 28 13             	movaps (%rbx),%xmm2
+  8f:	66 0f 59 cb          	mulpd  %xmm3,%xmm1
+  93:	0f 29 00             	movaps %xmm0,(%rax)
+  96:	0f 28 13             	movaps (%rbx),%xmm2
+  99:	0f 58 cb             	addps  %xmm3,%xmm1
+  9c:	0f 28 00             	movaps (%rax),%xmm0
+  9f:	66 0f 59 da          	mulpd  %xmm2,%xmm3
+  a3:	0f 29 0b             	movaps %xmm1,(%rbx)
+  a6:	0f 28 00             	movaps (%rax),%xmm0
+  a9:	0f 58 da             	addps  %xmm2,%xmm3
+  ac:	0f 28 0b             	movaps (%rbx),%xmm1
+  af:	66 0f 59 d0          	mulpd  %xmm0,%xmm2
+  b3:	0f 29 18             	movaps %xmm3,(%rax)
+  b6:	0f 28 0b             	movaps (%rbx),%xmm1
+  b9:	0f 58 d0             	addps  %xmm0,%xmm2
+  bc:	0f 28 18             	movaps (%rax),%xmm3
+  bf:	66 0f 59 c1          	mulpd  %xmm1,%xmm0
+  c3:	0f 29 13             	movaps %xmm2,(%rbx)
+  c6:	0f 28 18             	movaps (%rax),%xmm3
+  c9:	0f 58 c1             	addps  %xmm1,%xmm0
+  cc:	0f 28 13             	movaps (%rbx),%xmm2
+  cf:	48 83 ef 28          	sub    $0x28,%rdi
+  d3:	0f 85 76 ff ff ff    	jne    4f <LL>
+  d9:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  dd:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  e1:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  e5:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  e9:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  ed:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  f1:	5b                   	pop    %rbx
+  f2:	c9                   	leaveq 
+  f3:	c3                   	retq   

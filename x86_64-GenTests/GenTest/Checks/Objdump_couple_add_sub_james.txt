@@ -1,0 +1,67 @@
+
+Compilation/dot_o/couple_add_sub_james.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <couple_add_sub_james>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+   8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+   c:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  10:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  14:	48 8b 40 08          	mov    0x8(%rax),%rax
+  18:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  1c:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  20:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  24:	48 8b 40 08          	mov    0x8(%rax),%rax
+  28:	48 83 f8 0f          	cmp    $0xf,%rax
+  2c:	0f 86 95 00 00 00    	jbe    c7 <LL+0x8a>
+  32:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  36:	48 8b 40 08          	mov    0x8(%rax),%rax
+  3a:	48 89 c7             	mov    %rax,%rdi
+
+000000000000003d <LL>:
+  3d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  41:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  45:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  49:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  4d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  51:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  55:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  59:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  5d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  61:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  65:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  69:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  6d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  71:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  75:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  79:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  7d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  81:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  85:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  89:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  8d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  91:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  95:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  99:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  9d:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  a1:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  a5:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  a9:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  ad:	66 0f 58 c1          	addpd  %xmm1,%xmm0
+  b1:	66 0f 5c d0          	subpd  %xmm0,%xmm2
+  b5:	66 0f 58 da          	addpd  %xmm2,%xmm3
+  b9:	66 0f 5c cb          	subpd  %xmm3,%xmm1
+  bd:	48 83 ef 20          	sub    $0x20,%rdi
+  c1:	0f 85 76 ff ff ff    	jne    3d <LL>
+  c7:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  cb:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  cf:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  d3:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  d7:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  db:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  df:	c9                   	leaveq 
+  e0:	c3                   	retq   

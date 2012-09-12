@@ -1,0 +1,5 @@
+movaps  (%rax),%xmm0
+movaps  (%rbx),%xmm1
+mulpd   %xmm2,%xmm0
+addps   %xmm0,%xmm1
+movaps  %xmm1,(%rbx)

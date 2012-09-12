@@ -1,0 +1,12 @@
+Immédiats;1M
+Reg32;r32
+Reg64;r64
+Xmm reg;xmm;;;
+Ymm reg;ymm;;;
+Mem:base64;Reg64;;;;
+Mem:index64;Reg64;;;;
+Mem:szconfig;64;;;;
+Mem:disp;1D;;;;
+Mem:scale;1;;;;
+Mem:config;disp+base;;;
+;;;;

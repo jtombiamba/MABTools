@@ -1,0 +1,6 @@
+MOV;%rax;%rbx;
+ADD;$0x1;%r9;
+MOVAPS;(%rax);%xmm0;
+MULPS;%xmm2;%xmm1;
+NOP;
+MOV;0x1(%rbx);%ebp;

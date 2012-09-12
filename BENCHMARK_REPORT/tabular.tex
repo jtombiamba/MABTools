@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{marvosym}
+\usepackage{ifpdf}
+\ifpdf
+	\usepackage[pdftex]{graphicx}
+\else
+	\usepackage[dvips]{graphicx}\fi
+
+\pagestyle{empty}
+
+\usepackage[scale=0.775]{geometry}
+
+\begin{document}
+
+\section{Instruction Sandy Bridge}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Instruction & Op & Thr & Agner\_Thr & Lat & Agner\_Lat \\
+\hline
+ADD SUB & i/r,r & 0.36 & 0.33 & 0.84 & 1 \\
+MOV & i/r,r & 0.36 & 0.33 & 0.84 & 1 \\
+ADC SBB & i/r,r & 0.90 & 1 &  & 2 \\
+CMP & i,r & 0.37 & 0.33 &  & 1 \\
+RCL & 1,r & 1.63 & 2 &  & 2 \\
+TEST & i,r & 0.42 & 0.33 &  & 1 \\
+AND XOR OR & i,r & 0.36 & 0.33 &  & 1 \\
+BLENDPS/PD & i,x,x &  & 0.5 & 0.84 & 1 \\
+CMPPD/CMPPS & x,x &  & 1 & 2.54 & 3 \\
+CMPSS/CMPSD & x,x &  & 1 & 2.52 & 3 \\
+DDPD & i,x,x &  & 2 & 7.59 & 9 \\
+DDPS & i,x,x &  & 2 & 10.28 & 12 \\
+INSERTPS & i,x,x & 0.99 & 1 & 0.99 & 1 \\
+MPSADBW & i,x,x &  & 1 & 5.07 & 6 \\
+PALIGNR & i,x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PBLENDW & i,x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PSHUFD & i,x,x & 0.48 & 0.5 & 0.84 & 1 \\%check
+PSHUFHW & i,x,x & 0.48 & 0.5 & 0.84 & 1 \\%check
+PSHUFLW & i,x,x & 0.48 & 0.5 & 0.85 & 1 \\%check
+ROUNDPD/PS & i,x,x & 0.86 & 1 & 0.85 & 3 \\%check
+ROUNDSD/SS & i,x,x & 0.85 & 1 & 2.52 & 3 \\
+SHUFPS/PD & i,x,x & 0.99 & 1 & 0.99 & 1 \\
+VPSHUFD/S & i,x,x &  &  & 0.48 &  \\%check
+ADDPS/PD & m,x & 0.85 & 1 & 2.52 &  \\
+ADDSUBPS/PD & m,x & 0.85 & 1 & 2.52 &  \\
+ADDPS/PD & x,x & 0.94 & 1 & 2.52 & 3 \\
+ADDPS/PD & m,x & 0.85 & 1 & 2.52 &  \\
+ADDSD/SS & x,x & 0.94 & 1 & 2.52 & 3 \\
+AESDEC AESENC & x,x & 2.54 & 4 & 6.72 & 8 \\
+AESDEC AESENC & m,x & 1.68 &  & 6.72 &  \\
+AESDECLAST AESENCLAST & m,x & 1.79 &  & 6.72  &  \\
+AESIMC & x,x & 2.09 & 2 & 2.10 & 2 \\
+AESIMC & m,x & 2.44 &  &  &  \\
+ANDNPD/PS & x,x & 0.99 & 1 & 0.99 & 1 \\
+ANDNPD/PS & m,x & 1.02 & 1 & 1.02 &  \\
+ANDPS/PD & x,x & 0.99 & 1 & 0.99 & 1 \\
+ANDPS/PD & m,x & 1.02 & 1 & 1.02 &  \\
+BLENDVPD & m,x & 1.68 &  &  &  \\
+CVTDQ2PS & m,x & 0.85 & 1 &  &  \\
+CVT(T)PD2DQ & m,x & 1.05 & 1 &  &  \\
+CVTPD2PS & m,x & 1.05 & 1 &  &  \\
+CVT(T)PS2DQ & m,x & 0.85 & 1 &  &  \\
+DIVPS/PD & m,x & 84.57 & 10-22 &  &  \\
+COMISD & x,x & 0.87 & 1 & 0.87 & 2 \\
+COMISS & x,x & 1.50 & 1 & 1.51 & 2 \\
+DIVSD DIVPD & x,x & 8.46 & 10-22 & 8.41 & 10-22 \\
+DIVSS DIVPS & x,x & 8.47 & 10-22 & 8.41 & 10-22 \\
+HADDPS/D & x,x & 2 & 2 & 4.20 & 5 \\
+HADDPS/D & m,x & 2.O3 & 2 &  &  \\
+HSUBPS/D & x,x & 2 & 2 & 4.20 & 5 \\
+HSUBPS/D & m,x & 2.04 & 2 &  &  \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Instruction & Op & Thr & Agner\_Thr & Lat & Agner\_Lat \\
+\hline
+MAXPD/S & x,x & 0.94 & 1 & 2.52 & 3 \\
+MAXPD/S & m,x & 0.85 & 1 &  &  \\
+MAXSS/D & x,x & 0.94 & 1 & 2.52 & 3 \\
+MAXSS/D & m,x & 0.85 & 1 &  &  \\
+MINPS/D & x,x & 0.95 & 1 & 2.52 & 3 \\
+MINPS/D & m,x & 0.85 & 1 &  &  \\
+MINSS/D & x,x & 0.95 & 1 & 2.52 & 3 \\
+MINSS/D & m,x & 0.85 & 1 &  &  \\
+MOVAPS/D & x,x & 0.99 & 1 & 0.99 & 1 \\
+MOVAPS/D & m,x & 0.46 & 0.5 &  & 3 \\
+MOVDQA & x,x & 0.43 & 0.33 & 0.43 & 1  \\
+MOVNTDQA & m,x & 0.5 & 0.5 &  &   \\
+MOVDQU & m,x & 0.46 & 0.5 &  &  \\
+MOVSH/LDUP & m,x & 0.5 & 0.5 &  & 3 \\
+MOVQ & x,x & 0.35 & 0.33 & 0.84 & 1 \\
+MOVSS/D & x,x & 0.99 & 1 & 0.99 & 1 \\
+MOVUPS/D & x,x & 0.99 &  & 0.99 &  \\
+MOVUPS/D & m,x & 0.46 & 0.5 &  &  \\
+MULPS/D & x,x & 1.57 & 1 & 4.20 & 5 \\
+MULPS/D & m,x & 1.05 & 1 &  &  \\
+ORPS/D & x,x & 0.99 & 1 & 0.99 & 1 \\
+ORPS/D & m,x & 1.02 & 1 &  &  \\
+PABSB/W/D & x,x & 0.48 & 0.5 & 0.48 & 1 \\
+PABSB/W/D & m,x & 0.54 & 0.5 &  &  \\
+PADDB/W/D/Q & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PADDB/W/D/Q & m,x & 0.54 & 0.5 &  &  \\
+PADDSB/W & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PACKSSWB/DW & m,x & 0.55 & 0.5 &  &   \\
+PACKUSSWB/DW & m,x & 0.55 & 0.5 &  &  \\
+PANDN & x,x & 0.37 & 0.33 & 0.84 & 1 \\
+PAND & x,x & 0.37 & 0.33 & 0.84 & 1 \\
+PAVGB/W & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PHADDD/W & x,x & 1.83 & 1.5 & 1.83 & 2 \\
+PMAXSB/MINSB & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMAXSW/MINSW & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMAXSD/MINSD & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMAXUB/MINUB & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMAXUD/MINUD & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMAXUW/MINUW & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PMULDQ & x,x & 1.57 & 1 & 4.20 & 5 \\
+PMULHW & x,x & 1.57 & 1 & 4.20 & 5 \\
+PMULLD & x,x & 1.57 & 1 & 4.20 & 5 \\
+PMULLW & x,x & 1.57 & 1 & 4.20 & 5 \\
+POR & x,x & 0.37 & 0.33 & 0.84 & 1 \\
+PSADBW & x,x & 1.58 & 1 & 4.22 & 5 \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Instruction & Op & Thr & Agner\_Thr & Lat & Agner\_Lat \\
+\hline
+PSHUFB & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PSIGNB/W/D & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PSLL/RL/RAW/D/Q & x,x & 1.01 & 1 &  & 2 \\
+PSUBB/D/Q & x,x & 0.49 & 0.5 & 0.84 & 1 \\
+PTEST & x,x & 0.87 &  & 0.87 &  \\
+PXOR & x,x & 0.37 & 0.33 & 0.87 & 1 \\
+RCPSS/PS & x,x & 0.87 & 1 & 4.22 & 5 \\
+SQRTSS/PS & x,x & 8.60 & 10-14 & 8.62 & 10-14 \\
+SQRTSD/PD & x,x & 8.60 & 10-21 & 8.47 & 10-21 \\
+SUBSS/SD & x,x & 0.95 & 1 & 2.52 & 3 \\
+SUBPS/PD & x,x & 0.95 & 1 & 2.52 & 3 \\
+VPABSB/W/D & x,x & 0.48 &  & 0.48 &  \\
+XORPS/PD & x,x & 0.99 & 1 & 0.99 & 1 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
+

@@ -1,0 +1,2 @@
+MOVAPS;%%xmm;%%xmm;;;1
+MOVAPS;%%xmm;%%xmm;;;1

@@ -1,0 +1,5 @@
+MOVAPS;(%rax);%xmm0;
+MOVAPS;(%rbx);%xmm1;
+MULPD;%xmm2;%xmm0;
+ADDPS;%xmm0;%xmm1;
+MOVAPS;%xmm1;(%rbx);

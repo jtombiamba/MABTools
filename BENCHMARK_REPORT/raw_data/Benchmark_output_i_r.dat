@@ -1,0 +1,11 @@
+test_ADC_i_r	0.87
+test_ADD_i_r	0.36
+test_AND_i_r	0.43
+test_CMP_i_r	0.42
+test_MOV_i_r	0.36
+test_OR_i_r	0.43
+test_RCL_i_r	1.63
+test_SBB_i_r	0.90
+test_SUB_i_r	0.42
+test_TEST_i_r	0.43
+test_XOR_i_r	0.36

@@ -1,0 +1,6 @@
+;Instruction;Op1;Op2;Op3;Op4;unroll
+;ADD;imm8;r64;;;16
+;MOV;imm32;r64;;;16
+;ADDPD;xmm;xmm;;;16
+MOVAPS;xmm;xmm;;;16
+;MOVAPS;xmm;m128;;16

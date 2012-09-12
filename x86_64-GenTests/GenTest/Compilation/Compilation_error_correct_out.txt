@@ -1,0 +1,4 @@
+Results/correct_out.c: In function ‘correct_out’:
+Results/correct_out.c:18:4: error: unknown register name ‘%XMM0’ in ‘asm’
+Results/correct_out.c:18:4: error: unknown register name ‘%XMM1’ in ‘asm’
+gcc: Compilation/main.c: Aucun fichier ou dossier de ce type

@@ -1,0 +1,17 @@
+Results/test_movd_r_xmm.c: Assembler messages:
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing
+Results/test_movd_r_xmm.c:18: Error: expecting operand before ','; got nothing

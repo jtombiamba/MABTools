@@ -1,0 +1,15 @@
+
+Compilation/dot_o/test_james.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <Label>:
+   0:	48 c7 c1 64 00 00 00 	mov    $0x64,%rcx
+
+0000000000000007 <LL>:
+   7:	83 d0 01             	adc    $0x1,%eax
+   a:	01 c0                	add    %eax,%eax
+   c:	48 83 e9 02          	sub    $0x2,%rcx
+  10:	75 f5                	jne    7 <LL>
+  12:	c3                   	retq   

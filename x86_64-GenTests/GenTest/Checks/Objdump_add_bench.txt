@@ -1,0 +1,59 @@
+
+Compilation/dot_o/add_bench.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <add_bench>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+   8:	48 c7 45 f0 00 00 00 	movq   $0x0,-0x10(%rbp)
+   f:	00 
+  10:	48 c7 45 f8 00 00 00 	movq   $0x0,-0x8(%rbp)
+  17:	00 
+  18:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  1c:	48 8b 40 08          	mov    0x8(%rax),%rax
+  20:	48 83 f8 0f          	cmp    $0xf,%rax
+  24:	76 72                	jbe    98 <LL+0x60>
+  26:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  2a:	48 8b 40 08          	mov    0x8(%rax),%rax
+  2e:	48 89 c1             	mov    %rax,%rcx
+  31:	48 c7 c1 64 00 00 00 	mov    $0x64,%rcx
+
+0000000000000038 <LL>:
+  38:	48 83 c0 01          	add    $0x1,%rax
+  3c:	49 83 c0 01          	add    $0x1,%r8
+  40:	48 83 c3 01          	add    $0x1,%rbx
+  44:	48 83 c7 01          	add    $0x1,%rdi
+  48:	48 83 c0 01          	add    $0x1,%rax
+  4c:	49 83 c0 01          	add    $0x1,%r8
+  50:	48 83 c3 01          	add    $0x1,%rbx
+  54:	48 83 c7 01          	add    $0x1,%rdi
+  58:	48 83 c0 01          	add    $0x1,%rax
+  5c:	49 83 c0 01          	add    $0x1,%r8
+  60:	48 83 c3 01          	add    $0x1,%rbx
+  64:	48 83 c7 01          	add    $0x1,%rdi
+  68:	48 83 c0 01          	add    $0x1,%rax
+  6c:	49 83 c0 01          	add    $0x1,%r8
+  70:	48 83 c3 01          	add    $0x1,%rbx
+  74:	48 83 c7 01          	add    $0x1,%rdi
+  78:	48 83 e9 10          	sub    $0x10,%rcx
+  7c:	75 ba                	jne    38 <LL>
+  7e:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  82:	48 8b 40 08          	mov    0x8(%rax),%rax
+  86:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  8a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  8e:	48 8b 40 08          	mov    0x8(%rax),%rax
+  92:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+  96:	eb 08                	jmp    a0 <LL+0x68>
+  98:	48 c7 45 f8 00 00 00 	movq   $0x0,-0x8(%rbp)
+  9f:	00 
+  a0:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  a4:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  a8:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  ac:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  b0:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  b4:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  b8:	c9                   	leaveq 
+  b9:	c3                   	retq   

@@ -1,0 +1,72 @@
+
+Compilation/dot_o/test_TEST_i_r.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_TEST_i_r>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+   d:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  11:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  15:	48 8b 40 08          	mov    0x8(%rax),%rax
+  19:	48 89 55 e0          	mov    %rdx,-0x20(%rbp)
+  1d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  21:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  25:	48 8b 40 08          	mov    0x8(%rax),%rax
+  29:	48 83 f8 0f          	cmp    $0xf,%rax
+  2d:	0f 86 f7 00 00 00    	jbe    12a <LL+0xe2>
+  33:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  37:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  3b:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  3f:	48 8b 30             	mov    (%rax),%rsi
+  42:	48 89 d1             	mov    %rdx,%rcx
+  45:	48 89 f3             	mov    %rsi,%rbx
+
+0000000000000048 <LL>:
+  48:	48 a9 01 00 00 00    	test   $0x1,%rax
+  4e:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  55:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  5c:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  63:	48 a9 01 00 00 00    	test   $0x1,%rax
+  69:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  70:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  77:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  7e:	48 a9 01 00 00 00    	test   $0x1,%rax
+  84:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  8b:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  92:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  99:	48 a9 01 00 00 00    	test   $0x1,%rax
+  9f:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  a6:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  ad:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  b4:	48 a9 01 00 00 00    	test   $0x1,%rax
+  ba:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  c1:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  c8:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  cf:	48 a9 01 00 00 00    	test   $0x1,%rax
+  d5:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  dc:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  e3:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+  ea:	48 a9 01 00 00 00    	test   $0x1,%rax
+  f0:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+  f7:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+  fe:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+ 105:	48 a9 01 00 00 00    	test   $0x1,%rax
+ 10b:	49 f7 c2 01 00 00 00 	test   $0x1,%r10
+ 112:	49 f7 c0 01 00 00 00 	test   $0x1,%r8
+ 119:	49 f7 c1 01 00 00 00 	test   $0x1,%r9
+ 120:	48 83 e9 20          	sub    $0x20,%rcx
+ 124:	0f 85 1e ff ff ff    	jne    48 <LL>
+ 12a:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+ 12e:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+ 132:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+ 136:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+ 13a:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+ 13e:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+ 142:	5b                   	pop    %rbx
+ 143:	c9                   	leaveq 
+ 144:	c3                   	retq   

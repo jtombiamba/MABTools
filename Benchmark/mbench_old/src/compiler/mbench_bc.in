@@ -1,0 +1,13 @@
+#!/bin/sh
+
+temp="/tmp/tmp.$$.c"
+@prefix@/@bindir@/mbench_cgen $1 -o $temp
+
+if test "@CC@" = "icc"; then
+   OMPFLAGS=-openmp
+else
+   OMPFLAGS=-fopenmp
+fi
+
+@CC@ -Wall -O3 -I@prefix@/@includedir@ -L@prefix@/lib -lmbench $OMPFLAGS -o $2 $temp @prefix@/custom/*.c
+rm $temp

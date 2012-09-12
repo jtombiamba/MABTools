@@ -1,0 +1,72 @@
+
+Compilation/dot_o/test_CMP_i_r.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_CMP_i_r>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+   d:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  11:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  15:	48 8b 40 08          	mov    0x8(%rax),%rax
+  19:	48 89 55 e0          	mov    %rdx,-0x20(%rbp)
+  1d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  21:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  25:	48 8b 40 08          	mov    0x8(%rax),%rax
+  29:	48 83 f8 0f          	cmp    $0xf,%rax
+  2d:	0f 86 9f 00 00 00    	jbe    d2 <LL+0x8a>
+  33:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  37:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  3b:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  3f:	48 8b 30             	mov    (%rax),%rsi
+  42:	48 89 d1             	mov    %rdx,%rcx
+  45:	48 89 f3             	mov    %rsi,%rbx
+
+0000000000000048 <LL>:
+  48:	48 83 f8 01          	cmp    $0x1,%rax
+  4c:	49 83 fa 01          	cmp    $0x1,%r10
+  50:	49 83 f8 01          	cmp    $0x1,%r8
+  54:	49 83 f9 01          	cmp    $0x1,%r9
+  58:	48 83 f8 01          	cmp    $0x1,%rax
+  5c:	49 83 fa 01          	cmp    $0x1,%r10
+  60:	49 83 f8 01          	cmp    $0x1,%r8
+  64:	49 83 f9 01          	cmp    $0x1,%r9
+  68:	48 83 f8 01          	cmp    $0x1,%rax
+  6c:	49 83 fa 01          	cmp    $0x1,%r10
+  70:	49 83 f8 01          	cmp    $0x1,%r8
+  74:	49 83 f9 01          	cmp    $0x1,%r9
+  78:	48 83 f8 01          	cmp    $0x1,%rax
+  7c:	49 83 fa 01          	cmp    $0x1,%r10
+  80:	49 83 f8 01          	cmp    $0x1,%r8
+  84:	49 83 f9 01          	cmp    $0x1,%r9
+  88:	48 83 f8 01          	cmp    $0x1,%rax
+  8c:	49 83 fa 01          	cmp    $0x1,%r10
+  90:	49 83 f8 01          	cmp    $0x1,%r8
+  94:	49 83 f9 01          	cmp    $0x1,%r9
+  98:	48 83 f8 01          	cmp    $0x1,%rax
+  9c:	49 83 fa 01          	cmp    $0x1,%r10
+  a0:	49 83 f8 01          	cmp    $0x1,%r8
+  a4:	49 83 f9 01          	cmp    $0x1,%r9
+  a8:	48 83 f8 01          	cmp    $0x1,%rax
+  ac:	49 83 fa 01          	cmp    $0x1,%r10
+  b0:	49 83 f8 01          	cmp    $0x1,%r8
+  b4:	49 83 f9 01          	cmp    $0x1,%r9
+  b8:	48 83 f8 01          	cmp    $0x1,%rax
+  bc:	49 83 fa 01          	cmp    $0x1,%r10
+  c0:	49 83 f8 01          	cmp    $0x1,%r8
+  c4:	49 83 f9 01          	cmp    $0x1,%r9
+  c8:	48 83 e9 20          	sub    $0x20,%rcx
+  cc:	0f 85 76 ff ff ff    	jne    48 <LL>
+  d2:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  d6:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  da:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  de:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+  e2:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  e6:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+  ea:	5b                   	pop    %rbx
+  eb:	c9                   	leaveq 
+  ec:	c3                   	retq   

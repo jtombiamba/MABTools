@@ -1,0 +1,104 @@
+
+Compilation/dot_o/test_VMOVAPS_x_x.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <test_VMOVAPS_x_x>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	53                   	push   %rbx
+   5:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+   9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+   d:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  11:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  15:	48 8b 40 08          	mov    0x8(%rax),%rax
+  19:	48 89 55 e0          	mov    %rdx,-0x20(%rbp)
+  1d:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  21:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  25:	48 8b 40 08          	mov    0x8(%rax),%rax
+  29:	48 83 f8 0f          	cmp    $0xf,%rax
+  2d:	0f 86 1f 01 00 00    	jbe    152 <LL+0x10a>
+  33:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  37:	48 8b 40 08          	mov    0x8(%rax),%rax
+  3b:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+  3f:	48 8b 12             	mov    (%rdx),%rdx
+  42:	48 89 c1             	mov    %rax,%rcx
+  45:	48 89 d3             	mov    %rdx,%rbx
+
+0000000000000048 <LL>:
+  48:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  4c:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  50:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  54:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  58:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  5c:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  60:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  64:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  68:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  6c:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  70:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  74:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  78:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  7c:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  80:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  84:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  88:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  8c:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  90:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  94:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  98:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  9c:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  a0:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  a4:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  a8:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  ac:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  b0:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  b4:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  b8:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  bc:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  c0:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  c4:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  c8:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  cc:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  d0:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  d4:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  d8:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  dc:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  e0:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  e4:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  e8:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  ec:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  f0:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+  f4:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+  f8:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+  fc:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 100:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 104:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 108:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 10c:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 110:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 114:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 118:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 11c:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 120:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 124:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 128:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 12c:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 130:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 134:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 138:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 13c:	c5 f8 28 dc          	vmovaps %xmm4,%xmm3
+ 140:	c5 f8 28 ee          	vmovaps %xmm6,%xmm5
+ 144:	c5 f8 28 ca          	vmovaps %xmm2,%xmm1
+ 148:	48 83 e9 40          	sub    $0x40,%rcx
+ 14c:	0f 85 f6 fe ff ff    	jne    48 <LL>
+ 152:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+ 156:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+ 15a:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+ 15e:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+ 162:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+ 166:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+ 16a:	5b                   	pop    %rbx
+ 16b:	c9                   	leaveq 
+ 16c:	c3                   	retq   

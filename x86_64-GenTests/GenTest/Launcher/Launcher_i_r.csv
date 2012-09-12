@@ -1,0 +1,17 @@
+ADC_i_r;Lp_i_r_db.tmp;16;ADC;imm32;r64;;
+ADD_i_r;Lp_i_r_db.tmp;16;ADD;imm32;r64;;
+AND_i_r;Lp_i_r_db.tmp;16;AND;imm32;r64;;
+AND_i_r;Lp_i_r_db.tmp;16;AND;imm32;r64;;
+CMP_i_r;Lp_i_r_db.tmp;16;CMP;imm32;r64;;
+CMP_i_r;Lp_i_r_db.tmp;16;CMP;imm32;r64;;
+MOV_i_r;Lp_i_r_db.tmp;16;MOV;imm32;r64;;
+OR_i_r;Lp_i_r_db.tmp;16;OR;imm32;r64;;
+OR_i_r;Lp_i_r_db.tmp;16;OR;imm32;r64;;
+RCL_i_r;Lp_i_r_db.tmp;16;RCL;imm32;r64;;
+SBB_i_r;Lp_i_r_db.tmp;16;SBB;imm32;r64;;
+SBB_i_r;Lp_i_r_db.tmp;16;SBB;imm32;r64;;
+SUB_i_r;Lp_i_r_db.tmp;16;SUB;imm32;r64;;
+SUB_i_r;Lp_i_r_db.tmp;16;SUB;imm32;r64;;
+TEST_i_r;Lp_i_r_db.tmp;16;TEST;imm32;r64;;
+TEST_i_r;Lp_i_r_db.tmp;16;TEST;imm32;r64;;
+XOR_i_r;Lp_i_r_db.tmp;16;XOR;imm32;r64;;

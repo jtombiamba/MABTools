@@ -1,0 +1,5 @@
+MOV;%%r64;%%r64;;
+ADD;$IMM;%%r64;;
+MOVAPS;1D(%%r64);%%xmm;;
+MULPS;%%xmm;%%xmm;;
+MOV;1D(%%r64);%%r32;;

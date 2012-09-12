@@ -1,0 +1,6 @@
+MOV;m64/m128;r32;;;;
+MOV;r64;r64;;;;
+MOVAPS;m64/m128;xmm;;;;
+ADD;imm;r64;;;;
+NOP;;;;
+MULPS;xmm;xmm;;;;

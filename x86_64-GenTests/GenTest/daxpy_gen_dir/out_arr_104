@@ -1,0 +1,5 @@
+MOVAPS;xmm;m128;;;;
+MOVAPS;m128;xmm;;;;
+MULPD;xmm;xmm;;;;
+MOVAPS;m128;xmm;;;;
+ADDPS;xmm;xmm;;;;

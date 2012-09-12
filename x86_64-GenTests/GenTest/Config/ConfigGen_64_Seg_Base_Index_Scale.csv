@@ -1,0 +1,32 @@
+Relatifs;0;1;-1;256;-256;;;;;;;;;;;
+Immédiats;0;1;-1;256;-256;65536;-65536;2147483648;-2147483648;;;;;;;
+Reg8;AL;CL;DL;BL;AH;CH;DH;BH;;;;;;;;
+Reg8ext;R8B;R9B;R10B;R11B;R12B;R13B;R14B;R15B;;;;;;;;
+Reg16;AX;CX;DX;BX;SP;BP;SI;DI;;;;;;;;
+Reg16ext;R8W;R9W;R10W;R11W;R12W;R13W;R14W;R15W;;;;;;;;
+Reg32;EAX;ECX;EDX;EBX;EBP;ESP;ESI;EDI;;;;;;;;
+Reg32ext;R8D;R9D;R10D;R11D;R12D;R13D;R14D;R15D;;;;;;;;
+Reg64;RAX;RCX;RDX;RBX;RBP;RSP;RSI;RDI;;;;;;;;
+Reg64ext;R8;R9;R10;R11;R12;R13;R14;R15;;;;;;;;
+Xmm reg;Xmm0;Xmm1;Xmm2;Xmm3;Xmm4;Xmm5;Xmm6;Xmm7;;;;;;;;
+Xmm reg ext;Xmm8;Xmm9;Xmm10;Xmm11;Xmm12;Xmm13;Xmm14;Xmm15;;;;;;;;
+Ymm reg;Ymm0;Ymm1;Ymm2;Ymm3;Ymm4;Ymm5;Ymm6;Ymm7;Ymm8;Ymm9;Ymm10;Ymm11;Ymm12;Ymm13;Ymm14;Ymm15
+Mmx reg;Mm0;Mm1;Mm2;Mm3;Mm4;Mm5;Mm6;Mm7;;;;;;;;
+Float reg;ST(0);ST(1);ST(2);ST(3);ST(4);ST(5);ST(6);ST(7);;;;;;;;
+Control Reg;CR0;CR2;CR4;CR7;CR8;;;;;;;;;;;
+Debug reg;DR0;DR1;DR2;DR3;DR4;DR5;DR6;DR7;DR8;DR9;DR10;DR11;DR12;DR13;DR14;DR15
+Mem:seg;ES;CS;DS;SS;FS;GS;;;;;;;;;;
+Mem:disp;0;1;-1;256;-256;;;;;;;;;;;
+Mem:base32;RIP;Reg32;;;;;;;;;;;;;;
+Mem:base32ext;Reg32ext;;;;;;;;;;;;;;;
+Mem:base64;RIP;Reg64;;;;;;;;;;;;;;
+Mem:base64ext;Reg64ext;;;;;;;;;;;;;;;
+Mem:index32;Reg32;;;;;;;;;;;;;;;
+Mem:index32ext;Reg32ext;;;;;;;;;;;;;;;
+Mem:index64;Reg64;;;;;;;;;;;;;;;
+Mem:index64ext;Reg64ext;;;;;;;;;;;;;;;
+Mem:scale;1;2;4;8;;;;;;;;;;;;
+Mem:config;seg+base+index+scale;;;;;;;;;;;;;;;
+Mem:szconfig;32;64;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;
+Configurations mémoires possibles;;disp;base;disp+base;seg+disp+base;base+index+scale;seg+base+index+scale;disp+base+index+scale;seg+disp+base+index+scale;;;;;;;

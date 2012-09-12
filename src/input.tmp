@@ -1,0 +1,6 @@
+mov    %rax,%rbx
+add    $0x1,%r9
+movaps (%rax),%xmm0
+mulps  %xmm2,%xmm1
+nop
+mov    0x1(%rbx),%ebp

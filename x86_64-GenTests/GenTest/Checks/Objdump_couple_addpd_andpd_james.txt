@@ -1,0 +1,51 @@
+
+Compilation/dot_o/couple_addpd_andpd_james.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <couple_addpd_andpd_james>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+   8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+   c:	48 8b 50 08          	mov    0x8(%rax),%rdx
+  10:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  14:	48 8b 40 08          	mov    0x8(%rax),%rax
+  18:	48 89 55 f0          	mov    %rdx,-0x10(%rbp)
+  1c:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  20:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  24:	48 8b 40 08          	mov    0x8(%rax),%rax
+  28:	48 83 f8 0f          	cmp    $0xf,%rax
+  2c:	76 51                	jbe    7f <LL+0x46>
+  2e:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  32:	48 8b 40 08          	mov    0x8(%rax),%rax
+  36:	48 89 c7             	mov    %rax,%rdi
+
+0000000000000039 <LL>:
+  39:	66 0f 54 c1          	andpd  %xmm1,%xmm0
+  3d:	66 0f 54 d0          	andpd  %xmm0,%xmm2
+  41:	66 0f 54 da          	andpd  %xmm2,%xmm3
+  45:	66 0f 54 cb          	andpd  %xmm3,%xmm1
+  49:	66 0f 54 c1          	andpd  %xmm1,%xmm0
+  4d:	66 0f 54 d0          	andpd  %xmm0,%xmm2
+  51:	66 0f 54 da          	andpd  %xmm2,%xmm3
+  55:	66 0f 54 cb          	andpd  %xmm3,%xmm1
+  59:	66 0f 54 c1          	andpd  %xmm1,%xmm0
+  5d:	66 0f 54 d0          	andpd  %xmm0,%xmm2
+  61:	66 0f 54 da          	andpd  %xmm2,%xmm3
+  65:	66 0f 54 cb          	andpd  %xmm3,%xmm1
+  69:	66 0f 54 c1          	andpd  %xmm1,%xmm0
+  6d:	66 0f 54 d0          	andpd  %xmm0,%xmm2
+  71:	66 0f 54 da          	andpd  %xmm2,%xmm3
+  75:	66 0f 54 cb          	andpd  %xmm3,%xmm1
+  79:	48 83 ef 10          	sub    $0x10,%rdi
+  7d:	75 ba                	jne    39 <LL>
+  7f:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+  83:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+  87:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  8b:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+  8f:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+  93:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
+  97:	c9                   	leaveq 
+  98:	c3                   	retq   
